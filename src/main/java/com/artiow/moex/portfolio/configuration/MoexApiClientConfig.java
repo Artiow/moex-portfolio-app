@@ -13,11 +13,6 @@ import org.springframework.web.client.RestTemplate;
 public class MoexApiClientConfig {
 
     @Bean
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
-
-    @Bean
     public MoexApiClient moexApiClient(RestTemplate restTemplate) {
         return new MoexApiClient(restTemplate);
     }
