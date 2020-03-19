@@ -1,13 +1,15 @@
 package com.artiow.moex.portfolio.entity;
 
 import lombok.Getter;
-import lombok.Setter;
 import org.springframework.data.annotation.Id;
 
 @Getter
-@Setter
-public abstract class AbstractDocument {
+public abstract class AbstractDocument implements Document {
 
     @Id
     private String id;
+
+    public boolean isNew() {
+        return id == null;
+    }
 }

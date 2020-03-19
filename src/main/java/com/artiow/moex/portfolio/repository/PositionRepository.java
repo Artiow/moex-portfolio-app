@@ -4,4 +4,5 @@ import com.artiow.moex.portfolio.entity.PositionDocument;
 
 public interface PositionRepository extends AbstractRepository<PositionDocument> {
 
+    PositionDocument findBySecidAndIsOpenIsTrue(String secid);
 }
